@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrganizeIt - Manage your tasks easily!</title>
+<!--     <script src="../node_modules/sortablejs/Sortable.min.js"></script> -->
+    <script src="./Sortable.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+<body class="bg-gray-300 min-h-screen">
+
+    <div class=" bg-blue-500 text-white text-center py-3 font-light">Turning your to-dos into ta-das! 🎉</div>
+    
+    <div class="w-full max-w-[360px] mx-auto mt-12 px-1 text-center">
+        <h1 class="text-2xl font-bold text-black-500">Organize, sort, and achieve<span class="text-neutral-500 hidden">@Prabal</span></h1>
+
+        
+    </div>
+
+    <div class="text-center">
+        <button id="addTaskButton" class="button mt-4 bg-blue-500 mx-auto font-bold text-black rounded-3xl px-4 py-3">Add tasks!</button>
+    </div>
+    <div id="addTaskContainer" class="w-full max-w-[500px] mx-auto mt-5 hidden">
+        <div class="flex gap-3">
+            <input id="taskName" type="text" class="w-[64%]  rounded-lg p-3 mb-2 focus:ring-2 focus:outline-none  focus:ring-blue-100 focus:border-blue-600" placeholder="Task Name" oninput="checkInput()">
+            <input id="dueDate" type="datetime-local" class="w-[36%]  rounded-lg px-3 mb-2 focus:ring-2 focus:outline-none  focus:ring-blue-100 focus:border-blue-600" placeholder="" oninput="checkInput()">
+        </div>
+        <input id="taskDescription" type="text" class="w-full text-xs h-[40px] rounded-lg p-1 px-3 mb-2 focus:ring-2 focus:outline-none  focus:ring-blue-100 focus:border-blue-600" placeholder="Description" oninput="checkInput()">
+        <div class="relative flex justify-center gap-2 mt-2">
+            <button id="cancelButton" class="bg-black text-sm text-white rounded-xl font-light w-full px-5 py-3">cancel</button>
+            <button id="addButton" class="bg-gray-500 text-sm text-white rounded-xl font-light w-full px-5 py-3" disabled>add task</button>
+        </div>
+    </div>
+    
+    <div id="todoContainer" class="w-full max-w-[500px] mx-auto mt-5"></div>
+
+    <script src="./App.js"></script>
+</body>
+</html>
